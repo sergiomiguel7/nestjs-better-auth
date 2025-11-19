@@ -4,7 +4,7 @@
 	"description": "Better Auth for NestJS",
 	"author": "Thalles Passos",
 	"license": "MIT",
-	"repository": "https://github.com/thallesp/nestjs-better-auth",
+	"repository": "https://github.com/sergiomiguel7/nestjs-better-auth",
 	"keywords": [
 		"nestjs",
 		"better-auth",
@@ -14,7 +14,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "unbuild",
-		"prepack": "bun run unbuild",
+		"prepack": "unbuild",
 		"lint": "biome lint",
 		"format": "biome format",
 		"check": "biome check",
@@ -32,7 +32,7 @@
 		"dist"
 	],
 	"devDependencies": {
-		"@apollo/server": "^4.12.2",
+		"@apollo/server": "^5.0.0",
 		"@as-integrations/express5": "^1.1.2",
 		"@biomejs/biome": "2.2.4",
 		"@faker-js/faker": "^10.0.0",
