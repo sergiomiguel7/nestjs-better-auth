@@ -56,12 +56,12 @@ export const Optional = OptionalAuth;
  * Provides easy access to the authenticated user's session data in controller methods.
  * Works with both HTTP and GraphQL execution contexts.
  */
-function sessionFactory(_data: unknown, context: ExecutionContext): unknown {
-	const request = getRequestFromContext(context);
-	return request.session;
-}
-
-export const Session = createParamDecorator(sessionFactory);
+export const Session = createParamDecorator(
+	(_data: unknown, context: ExecutionContext): unknown => {
+		const request = getRequestFromContext(context);
+		return request.session;
+	},
+);
 /**
  * Represents the context object passed to hooks.
  * This type is derived from the parameters of the createAuthMiddleware function.
